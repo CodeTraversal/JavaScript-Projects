@@ -1,29 +1,50 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>Untitled1</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta http-equiv="imagetoolbar" content="no">
-    <meta name="generator" content="ActivePresenter"/>
-    <meta name="author" content="Divya Gupta">
-    <meta name="copyright" content=" ()">
-    <meta name="description" content=""/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator - By Code Traversal</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input type="text" id="inputBox" placeholder="0" />
+        <div class="row">
+          <button class="button operator">AC</button>
+          <button class="button operator">DEL</button>
+          <button class="button operator">%</button>
+          <button class="button operator">/</button>
+        </div>
+        <div class="row">
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button operator">*</button>
+        </div>
+        <div class="row">
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button operator">-</button>
+        </div>
+        <div class="row">
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button operator">+</button>
+        </div>
 
-	<link href="player/mediaplayer.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="player/mediaplayer.js"></script>
-</head>
+        <div class="row">
+          <button class="button">00</button>
+          <button class="button">0</button>
+          <button class="button">.</button>
+          <button class="button equalBtn">=</button>
+        </div>
+      </div>
+    </div>
 
-<body>
-<div align="center"><font size="5" color="blue"><strong>Untitled1</strong></font></div>
-
-<div align="center" style="width: 80%; margin: 0 auto;">
-	<video id="video_containter" class="video-js vjs-default-skin vjs-fluid vjs-big-play-centered" controls preload="none" width="1364" height="768" poster="" data-setup="{}" style="background-color:#fff;">
-		<source src="start_clip.mp4" type="video/mp4" />
-		<!--
-		
-		-->
-	</video>
-</div>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
