@@ -49,6 +49,7 @@ function generatePassword(){
     return genPassword;
 }
 
+// Add an event listener to the copy icon to copy the value of the passBox element to the clipboard when clicked
 copyIcon.addEventListener('click', ()=>{
     if(passBox.value != "" || passBox.value.length >=1){
         navigator.clipboard.writeText(passBox.value);
@@ -59,5 +60,10 @@ copyIcon.addEventListener('click', ()=>{
             copyIcon.innerHTML = "content_copy";
             copyIcon.title = "";
         }, 3000)
+    } else {
+        // alert("Please generate a password first!");
+        swal("Password Generator says", "Please generate password first!", "warning", {
+  button: "Aww yess!",
+});
     }
 });
