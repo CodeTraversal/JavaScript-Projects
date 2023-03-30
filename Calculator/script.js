@@ -15,8 +15,9 @@ arr.forEach(button => {
             input.value = string;
         }
         else if(e.target.innerHTML == 'DEL'){
-            string = string.substring(0, string.length-1);
-            input.value = string;
+            // string=string.slice(0,(string.length-1));
+            string=input.e.slice(0,(input.value.length-1));
+            input.value=string;
         }
         else{
             string += e.target.innerHTML;
