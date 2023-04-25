@@ -13,8 +13,9 @@ const addTodo = () => {
     }
 
     if (addBtn.value === "Edit") {
+        // Passing the original text to editLocalTodos function before edit it in the todoList
+        editLocalTodos(editTodo.target.previousElementSibling.innerHTML);
         editTodo.target.previousElementSibling.innerHTML = inputText;
-        editLocalTodos(inputText);
         addBtn.value = "Add";
         inputBox.value = "";
     }
