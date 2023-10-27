@@ -1,0 +1,124 @@
+/* Declaring CSS Variables */
+:root{
+    --primary-color: #008080;
+    --bcg-color: #f5f5f5;
+    --padding: 20px;
+    --border-radius: 5px;
+    --text-color: #fff;
+
+}
+
+/* Default Document Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, sans-serif;
+}
+
+body{
+    background-color: var(--bcg-color);
+    width: 100vw;
+}
+
+header{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    
+}
+
+header h1{
+    font-size:  36px;
+}
+
+main{
+    min-height: 78vh;
+    padding: var(--padding);
+    max-width: 800px;
+    margin:0 auto;
+}
+
+main form{
+    display: flex;
+    justify-content: center;
+}
+.result{
+    display: none;
+}
+form input[type="text"], button[type="submit"], .result div a{
+    border: none; 
+    font-size: 16px;
+    font-weight:500;
+    border-radius: var(--border-radius);
+    /* padding: calc(var(--padding/2)); */
+    padding: 10px;
+    
+}
+
+form input[type="text"]{
+    flex-grow: 1;
+}
+
+form button[type="submit"]{
+    background-color: var(--primary-color);
+    padding:(calc(var(--padding)/2));
+    color: var(--text-color);
+    margin-left: 20px;
+    cursor: pointer;
+    flex-grow: 0.3;
+    
+}
+
+footer{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding:var(--padding) ;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+.result{
+    background-color: #fff;
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.result p{
+    margin-top: 10px;
+}
+
+.result p[class="partOfSpeech"]{
+    font-style: italic;
+    color: #808080;
+    margin-top: 2px;
+}
+
+.result li{
+    padding: calc(var(--padding)/6);
+    margin-top: 20px;
+}
+
+.result div{
+    margin-top: 20px;
+}
+
+.result div a{
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+/* Responsive Code */
+@media screen and (max-width:320px) {
+    main form{
+        flex-direction: column;
+    }
+    form button[type="submit"]{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
