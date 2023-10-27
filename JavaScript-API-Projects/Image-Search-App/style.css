@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header{
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header h1{
+    color: #767676;
+}
+
+header form .search-container{
+    margin-top: 20px;
+    position: relative;
+}
+
+header form .search-container input{
+    width: 100%;
+    padding: 12px 24px;
+    font-style: 18px;
+    border-radius: 20px;
+    border:none;
+    background: #eee;
+}
+
+header form .search-container .material-icons{
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
+    color: #777;
+}
+
+.images-container{
+    margin-block: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.images-container img{
+    width: 300px;
+    height: 280px;
+}
+
+.images-container .imageDiv{
+    position: relative;
+}
+
+.imageDiv .overlay{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: height 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageDiv:hover .overlay{
+    height: 100%;
+}
+
+.imageDiv .overlay h3{
+    color: #fff;
+    display: none;
+    font-size: 20px;
+    text-align: center;
+}
+.imageDiv:hover .overlay h3{
+    display: block;
+}
+
+/* Adding Style to Load more button */
+.loadMoreBtn{
+    border:none;
+    background-color: #510175;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: none;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 50px 0;
+}
+
+/* Responsive Code */
+@media screen and (max-width:920px){
+    header{
+        width: 80%;
+    }
+    
+}
