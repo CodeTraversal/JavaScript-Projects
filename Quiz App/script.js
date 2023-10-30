@@ -53,16 +53,17 @@ const showQuestions = () => {
         choicesBox.appendChild(choiceDiv);
 
         choiceDiv.addEventListener('click', () => {
-            if (choiceDiv.classList.contains('selected')) {
-                choiceDiv.classList.remove('selected');
-            }
-            else {
-                choiceDiv.classList.add('selected');
-            }
+            // Deselect all choices
+            const allChoices = document.querySelectorAll('.choice');
+            allChoices.forEach((choice) => {
+                choice.classList.remove('selected');
+            });
+
+            // Select the clicked choice
+            choiceDiv.classList.add('selected');
         });
     }
-
-    if(currentQuestionIndex < quiz.length){
+        if(currentQuestionIndex < quiz.length){
         startTimer();
     }
 }
